@@ -18,14 +18,45 @@ body {
   text-decoration: none;
 }
 
+.main {
+  display: flex;
+}
+
+.instructions {
+  flex: 30%;
+  margin-top: 4em;
+}
+
+.instructions__list {
+  list-style: none;
+}
+
+.instructions__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 225px;
+  margin: .6em auto;
+}
+
+.instructions__key {
+  display: inline-block;
+  padding: .6em .8em;
+  border: 1px solid silver;
+  border-radius: 4px;
+}
+
 .drum {
-  width: 80%;
+  flex: 70%;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .drum {
     width: 100%;
+  }
+  .instructions {
+    display: none;
   }
 }
 
@@ -38,7 +69,6 @@ body {
 }
 
 .key {
-  cursor: pointer;
   transition: transform .07s ease;
 }
 
