@@ -1,0 +1,47 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.header__title {
+  margin-top: .4em;
+  margin-bottom: 0;
+
+  color: #A9222C;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.header__link {
+  color: #230E0B;
+  text-decoration: none;
+}
+
+.drum {
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  .drum {
+    width: 100%;
+  }
+}
+
+.primary-color {
+  fill: #A9222C;
+}
+
+.secondary-color {
+  fill: #140806;
+}
+
+.key {
+  transition: transform .07s ease;
+}
+
+.playing {
+  transform: translateY(10px);
+}

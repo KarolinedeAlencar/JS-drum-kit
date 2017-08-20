@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title"> JavaScript Drum Kit </h1>
+    <a class="header__link" href="https://javascript30.com/" target="_blank">JavaScript 30 Challenge - Wes Bos</a>
+  </header>
+  <main class="main">
+    <div class="drum">
+      <svg class="drum__svg" viewBox="0 0 1300 700" preserveAspectRatio="xMidYMid meet">
+        <g class="floor-tom-tom key" data-key="70">
+            <path class="primary-color" d="M438.7 488.6l-47.4 67h-3.5L436 484z" />
+            <path class="primary-color" d="M387.8 548.6h11.1l-5.5 9.4H384zM437.2 487.4l47.4 67h3.5l-48.2-71.6z" />
+            <path class="primary-color" d="M488.1 547.4H477l5.5 9.4h9.4zM354.6 347.1h167v141.1h-167z" />
+            <path class="secondary-color" d="M346.4 342.8l.3 6.6 183.1-.3-.2-4.9zM346.4 482.4l.3 6.5 183.1.5-.2-4.9z" />
+            <path class="secondary-color" d="M494.3 483.2l-15.9-1.7-.1-134.5 15.9 1.7zM444.3 484.7l-15.9-1.7-.1-135.5 15.9 1.7zM445.2 348.7l.1 134.5M391.3 484.2l-15.9-1.7-.1-134.5 15.9 1.7z" />
+        </g>
+        <g class="snare-drum key" data-key="72">
+            <path class="primary-color" d="M872.7 447.6l-47.4 67h-3.5L870 443z" />
+            <path class="primary-color" d="M821.8 507.6h11.1l-5.5 9.4H818z" />
+            <path class="primary-color" d="M871.2 446.4l47.4 67h3.5l-48.2-71.6z" />
+            <path class="primary-color" d="M922.1 506.4H911l5.5 9.4h9.4z" />
+            <path class="primary-color" d="M790.6 353h167v96.3h-167z" />
+            <path class="secondary-color" d="M782.4 350.1l.3 4.5 183.1-.2-.2-3.3zM782.4 445.3l.3 4.5 183.1.3-.2-3.3z" />
+            <path class="secondary-color" d="M930.3 445.9l-15.9-1.2-.1-91.7 15.9 1.1zM880.3 446.9l-15.9-1.2-.1-92.4 15.9 1.2zM881.2 354.1l.1 91.8M827.3 446.5l-15.9-1.1-.1-91.7 15.9 1.1z" />
+        </g>
+        <g class="middle-tom-tom key" data-key="83">
+            <path class="primary-color" d="M460.8 226.9L452 328l164.3 16.1 8.6-99.4z" />
+            <path class="secondary-color" d="M619.8 342.1l-169.6-17.7-.7 8.3L619.1 350zM458.5 228.8c.3 0 169.4 19.2 169.4 19.2l.6-6.8L460.8 222l-2.3 6.8z" />
+            <path class="secondary-color" d="M487.8 329.6l-11.2-2.1 9.6-97.1 11.2 2.1zM540.8 334.6l-11.2-2.1 9.6-97.1 11.2 2.1zM593.8 341.6l-11.2-2.1 9.6-97.1 11.2 2.1z" />
+        </g>
+        <g class="high-tom-tom key" data-key="68">
+            <path class="primary-color" d="M661.8 241.3l8.9 101.1 164.5-12.6-8.7-99.4z" />
+            <path class="secondary-color" d="M838.4 327.2l-170.1 12 .7 8.3 170.1-12.4zM659.9 243.6c.3 0 170.2-10.4 170.2-10.4l-.6-6.8-168.5 10-1.1 7.2z" />
+            <path class="secondary-color" d="M706.2 337.8l-11.4-.1-7.4-97.4 11.4.2zM759.3 333l-11.5-.1-7.4-97.4 11.4.2zM812.7 331.2l-11.4-.1-7.4-97.3 11.4.1z" />
+        </g>
+        <g class="bass-drum key" data-key="71">
+            <ellipse class="primary-color" cx="652.8" cy="495.8" rx="173.8" ry="173.8" />
+            <ellipse class="secondary-color" cx="652.8" cy="495.8" rx="164.1" ry="164.1" />
+            <path class="secondary-color" d="M486.1 479.3l6 46.1h-21.3v-42.6z" />
+            <path class="primary-color" d="M475.7 512.8l-86.5 152.8h-6.3l87.9-163.2z" />
+            <path class="secondary-color" d="M382.9 649.5h20.2L393 671h-17.1z" />
+            <g>
+                <path class="secondary-color" d="M824.9 479.3l-5.9 46.1h21.3v-42.6z" />
+                <path class="primary-color" d="M835.4 512.8l86.5 152.8h6.3l-87.9-163.2z" />
+                <path class="secondary-color" d="M928.2 649.5h-20.3l10.2 21.5h17z" />
+            </g>
+        </g>
+        <g class="ride-cymbal key" data-key="65">
+            <path class="primary-color" d="M268.6 579l92.2 64.4h6.8l-100.3-70.5z" />
+            <path class="secondary-color" d="M370.1 640.5l-16.9 1.2v7h22.7v-7z" />
+            <path class="primary-color" d="M299.1 174.7l4.9-8.1 7.8 8.1-6.4 6.4z" />
+            <path class="secondary-color" d="M166.4 97S284.6 227.3 416 281.7c0 0-119.7-145.6-249.6-184.7z" />
+            <path class="primary-color" d="M211.7 288l85-100-4.1-2.5-85.5 98.2zM266.1 578.2l-92.3 64.4h-6.7l100.2-70.5z" />
+            <path class="secondary-color" d="M164.6 639.7l16.9 1.2v7.1h-22.7v-7.1z" />
+            <path class="primary-color" d="M263.1 602.3l-9.3-373.4 9.3-7.2 6.7 378.9z" />
+            <path class="secondary-color" d="M251.4 247.4l17.9-20.7-8.8-12-17.6 20.6z" />
+        </g>
+        <g class="crash-cymbal key" data-key="74">
+            <path class="primary-color" d="M1005.2 587.1L913 651.5h-6.8l100.3-70.5z" />
+            <path class="secondary-color" d="M903.7 648.6l16.9 1.2v7h-22.7v-7z" />
+            <path class="primary-color" d="M974.7 182.8l-4.9-8.1-7.8 8.1 6.4 6.4z" />
+            <path class="secondary-color" d="M1107.4 105.1S989.2 235.4 857.8 289.8c0 0 119.7-145.6 249.6-184.7z" />
+            <path class="primary-color" d="M1062.1 296.1l-85-100 4.1-2.5 85.5 98.1zM1007.7 586.3l92.2 64.4h6.8l-100.2-70.5z" />
+            <path class="secondary-color" d="M1109.2 647.8l-16.9 1.2v7h22.7v-7z" />
+            <path class="primary-color" d="M1010.3 610.4l12.3-373.4-12.3-7.2-9 378.9z" />
+            <path class="secondary-color" d="M1022.4 255.5l-17.9-20.8 8.8-11.9 17.6 20.6z" />
+        </g>
+      </svg>
+    </div>
+  </main>
+  <div class="audios">
+    <audio data-key="65" src="sounds/ride.wav"></audio>
+    <audio data-key="68" src="sounds/hihat.wav"></audio>
+    <audio data-key="70" src="sounds/clap.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/snare.wav"></audio>
+    <audio data-key="74" src="sounds/openhat.wav"></audio>
+    <audio data-key="83" src="sounds/kick.wav"></audio>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
