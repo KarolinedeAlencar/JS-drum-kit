@@ -19,7 +19,6 @@ body {
 }
 
 .drum {
-  cursor: pointer;
   width: 80%;
   margin: 0 auto;
 }
@@ -39,6 +38,7 @@ body {
 }
 
 .key {
+  cursor: pointer;
   transition: transform .07s ease;
 }
 
